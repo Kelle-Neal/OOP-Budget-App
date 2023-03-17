@@ -1,19 +1,93 @@
 
 
 ######## CLASS ########
-class Budget:
-  my_budgets = set()
+class Budget():
+  print("********************** MY BUDGET  ********************************")
 
-  def __init__(self, budget_name):
-    self.budget_name = budget_name
+  def __init__(self, name):
+    self.ledger = []
+    self.name = name
+    self.balance = 0
+    self.withdrawal = 0
 
-  def new_budget(self, budget_name, new_budget):
-    new_budget = input('''*************** MY BUDGET *************** 
-    Enter name of new budget: ''')
-    my_budgets.add(new_budget)
-    print("A new budget for,", get_new_budget, "has been created.")
-    
-    print(my_budgets)
+  def deposit(self, amount, description=''):
+    self.balance += (float(amount))
+    self.ledger.append({"amount": (float(amount)), "description": description})
+
+  def withdrawal(self, amount, str(description='') -> str):
+    if self.check_funds(float(amount)):
+      self.balance -= (float(amount))
+      self.withdrawal += (float(amount))
+      self.ledger.append({"amount": -(float(amount)), "description": description})
+      return True
+    else:
+      return False
+
+  def get_balance(self):
+    return self.balance 
+
+  def transfer(self, amount, other):    
+    if self.check_funds(float(amount)):
+      self.withdrawal((float(amount)), f"Transfer to {other.category}")
+      other.deposit((float(amount)), f"Transfer to {self.category}")
+      return True
+    else:
+      return False
+
+  def check_funds(self, amount):
+    if self.balance < (float(amount)):
+      return False
+    else:
+      return True  
+
+  def __str__(self):
+    output = self.name.center(30, "*")    
+
+    for item in self.ledger:
+      output +=  '\n' + item['description'][30].ljust(30) + f"{item['amount']:.2f}".rjust(8)
+
+      output += '\n' + f"Total: $ {round(self.balance, 2)}"
+
+      return output
+
+
+
+# budget1 = Budget("Food")
+# budget2 = Budget("Housing")
+# budget3 = Budget("Utilities")
+# budget4 = Budget("Transportation")
+# budget5 = Budget("Travel")
+
+
+
+
+
+
+  # def ask_budget_name(self):
+  #   new_budget_name = input("Enter a name for the new budget: ")
+  #   return new_budget_name
+
+
+# if __name__ == '__main__':
+#   Budget()
+
+    # return(new_budget)
+    # print("A new budget for,", budget_name, "has been created.")
+
+  # def get_budget_name(self):
+  #   get_budget_name = input('''*************** MY BUDGET *************** 
+  #   Enter name of new budget: ''')
+  #   get_budget_name = budget_name.append
+  #   return print("A new budget for,", get_budget_name, "has been created.")
+
+# budget_name = ()
+
+# print(budget_name1)
+
+
+    # self.my_budgets = my_budgets.set(**kwargs)
+
+    # print(my_budgets)
 
 
 

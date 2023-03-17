@@ -1,11 +1,39 @@
+import budget
 from budget import Budget
 
 
-print()
+food = budget.Budget("Food")
+housing = budget.Budget("Housing")
+utilities = budget.Budget("Utilities")
+transportation = budget.Budget("Transportation")
+travel = budget.Budget("Travel")
 
+food.deposit(200, "Initial Deposit")
+housing.deposit(700, "Initial Deposit")
+utilities.deposit(200, "Initial Deposit")
+transportation.deposit(400, "Initial Deposit")
+travel.deposit(50, "Initial Deposit")
 
+food.withdrawal(30.25, "Groceries Meijer")
+utilities.withdrawal(50, "Columbia Gas")
+utilities.withdrawal(30, "Water")
+transportation.withdrawal(30, "Gas @ Costco")
+food.withdrawal(26.54), "Culvers"
 
+food.deposit(200, "20230317 Paycheck")
+housing.deposit(700, "20230317 Paycheck")
+utilities.deposit(200, "20230317 Paycheck")
+transportation(200, "20230317 Paycheck")
+travel.deposit(50, "20230317 Paycheck")
 
+housing.withdrawal(1350, "House Payment")
+food.withdrawal(96.84, "Groceries Costco")
+utilities.withdrawal(200, "Electric")
+food.transfer(25, travel)
+
+print(food)
+print(travel)
+print(utilities)
 
 
 
