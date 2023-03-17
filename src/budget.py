@@ -1,16 +1,16 @@
 ######## CLASS ########
 class Budget:
-  def __init__(self):
 
-######## ATTRIBUTES ########
+######## CLASS ATTRIBUTES ########
+
+######## CLASS METHODS ########
+
+######## INSTANCE ATTRIBUTES, METHODS and PROPERTIES ########
+  def __init__(self):
     self.name = "name"
     self.initial_deposit_amt = "initial_deposit_amt"
     self.current_balance = "current_balance"
 
-######## INSTANCE VARIABLE ########    
-    self.ledger = []
-
-######## METHODS ########
   def get_balance(self):
     self.current_balance = "current_balance"
 
@@ -31,6 +31,9 @@ class Budget:
     self.transfer_from = "transfer_from"
     self.transfer_to = "transfer_to"
     self.transfer_amt = "transfer_amt"
+
+######## INSTANCE VARIABLE ########    
+    self.ledger = []    
 
 ######## OBJECTS ########    
 
