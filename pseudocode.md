@@ -8,22 +8,28 @@
 
 ### INSTANCE ATTRIBUTES, METHODS and PROPERTIES
 
-- **budget_category_name**
-  - set name value
-    - input "Enter the name of the new budget category you want to create: "
-    - output "You have created a new budget category named: "
-- **initial_deposit_amt**
-  - get initial deposit -
-    - input "Enter the amount you wish to deposit: "
-  - set initial deposit amt value
-    - get name of where to assign initial deposit
-      - input "Which budget category do you want to deposit this to? "
-      - set initial deposit amt of that budget category
+- **activity**
+  - get activity_question
+    - input "What would you like to do today? "
+      - Balance
+      - Deposit
+      - Withdrawal
+      - Transfer
+      - Ledger
+      - New Budget
+  -set activity
+    - initiate activity
+
+#### BALANCE
+
 - **current_account_balance**
   - set current_account_balance
     - defaults to initial_deposit_amt
     - updates due to deposits and withdrawals
   - get_current_balance  
+
+#### DEPOSIT
+
 - **deposit_budget_category_name**
   - get deposit_budget_category_name
     - input "Which budget category do you want to make a deposit to? "
@@ -37,6 +43,9 @@
   - get deposit description
     - input "Enter deposit description: "
   - set deposit description
+
+#### WITHDRAWAL
+
 - **withdrawal_budget_category_name**
   - get withdrawal_budget_category_name
     - input "Which budget category do you want to make a withdrawal from? "
@@ -55,6 +64,9 @@
   - get current_balance for withdrawal_budget_category_name
   - set current_balance 
     - current_balance - withdrawal_amt
+
+#### TRANSFER
+
 - **transfer_withdrawal_budget_category_name**
   - get transfer_withdrawal_budget_category_name
     - input "Name of category you wish to transfer (withdrawal) money FROM: "
@@ -82,18 +94,23 @@
   - set current_balance 
     - current_balance + transfer_amt
 
-### INSTANCE VARIABLE
+#### LEDGER
 
 - **ledger**
   - get budget_category_name
-    - input "Enter budget you wish to view the leger of: "
-  - set   
+    - input "Enter budget you wish to view the ledger of: "
+  - set ledger
 
-budget_category_name = '''************** budget_category_name *************
-initial deposit
+#### NEW BUDGET
 
-print(budget_category_name)
-
-print(************** Category Name *************)
-
-
+- **budget_category_name**
+  - set name value
+    - input "Enter the name of the new budget category you want to create: "
+    - output "You have created a new budget category named: "
+- **initial_deposit_amt**
+  - get initial deposit -
+    - input "Enter the amount you wish to deposit: "
+  - set initial deposit amt value
+    - get name of where to assign initial deposit
+      - input "Which budget category do you want to deposit this to? "
+      - set initial deposit amt of that budget category
