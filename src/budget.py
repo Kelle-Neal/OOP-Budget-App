@@ -1,16 +1,65 @@
+
+
 ######## CLASS ########
 class Budget:
+  my_budgets = set()
+
+  def __init__(self, budget_name):
+    self.budget_name = budget_name
+
+  def new_budget(self, budget_name, new_budget):
+    new_budget = input('''*************** MY BUDGET *************** 
+    Enter name of new budget: ''')
+    my_budgets.add(new_budget)
+    print("A new budget for,", get_new_budget, "has been created.")
+    
+    print(my_budgets)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ######## CLASS ATTRIBUTES ########
-
 ######## CLASS METHODS ########
-
 ######## INSTANCE ATTRIBUTES, METHODS and PROPERTIES ########
-  def __init__(self, activity_name, menu_options, print_menu, option):
-    self.activity_name = "activity_name"
-    self.menu_options = "menu_options"
-    self.print_menu = "print_menu"
-    self.option = "option"
+  # def __init__(self, activity_name):
+  #   self.activity_name = "activity_name"
+  #   self.menu_options = "menu_options"
+  #   self.print_menu = "print_menu"
+  #   self.option = "option"
 
   #   self.activity_balance = "get_balance"
   #   self.activity_deposit = "deposit"

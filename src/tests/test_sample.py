@@ -1,4 +1,6 @@
-def test_one():
-    assert True
+from budget import Budget
 
-# You can write tests here or create new files in this directory with the name test_[something].py
+class Budget:
+
+  def test_activity_name:
+  self.

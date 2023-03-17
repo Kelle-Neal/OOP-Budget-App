@@ -114,3 +114,10 @@
     - get name of where to assign initial deposit
       - input "Which budget category do you want to deposit this to? "
       - set initial deposit amt of that budget category
+- **budget_categories**
+  - budget1 = Budget("Food") #groceries, restaurants, repairs
+  - budget2 = Budget("Housing") #mortgage/rent, insurance 
+  - budget3 = Budget("Utilities") #electric, gas, water, trash
+  - budget4 = Budget("Transportation") #car payment, gas, insurance, repairs
+  - budget5 = Budget("Travel") #hotel/airbnb, airfare, transportation, food, spending 
+
