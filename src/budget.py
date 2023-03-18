@@ -1,24 +1,19 @@
+class Budget:
+  print("******************************************")
 
-
-######## CLASS ########
-class Budget():
-  print("********************** MY BUDGET  ********************************")
-
-  def __init__(self, name):
+  def __init__(self, budget):
     self.ledger = []
-    self.name = name
+    self.budget = budget
     self.balance = 0
-    self.withdrawal = 0
 
   def deposit(self, amount, description=''):
-    self.balance += (float(amount))
-    self.ledger.append({"amount": (float(amount)), "description": description})
+    self.balance += amount
+    self.ledger.append({"amount": amount, "description": description})
 
-  def withdrawal(self, amount, str(description='') -> str):
-    if self.check_funds(float(amount)):
-      self.balance -= (float(amount))
-      self.withdrawal += (float(amount))
-      self.ledger.append({"amount": -(float(amount)), "description": description})
+  def withdrawal(self, amount, description=''):
+    if self.check_funds(amount):
+      self.balance -= amount
+      self.ledger.append({"amount": (amount), "description": description})
       return True
     else:
       return False
@@ -27,26 +22,26 @@ class Budget():
     return self.balance 
 
   def transfer(self, amount, other):    
-    if self.check_funds(float(amount)):
-      self.withdrawal((float(amount)), f"Transfer to {other.category}")
-      other.deposit((float(amount)), f"Transfer to {self.category}")
+    if self.check_funds(amount):
+      self.withdrawal(amount, f"Transfer to {other.budget}")
+      other.deposit(amount, f"Transfer from {self.budget}")
       return True
     else:
       return False
 
   def check_funds(self, amount):
-    if self.balance < (float(amount)):
+    if self.balance < amount:
       return False
     else:
       return True  
 
   def __str__(self):
-    output = self.name.center(30, "*")    
+    output = self.budget.center(38, "*")    
 
     for item in self.ledger:
-      output +=  '\n' + item['description'][30].ljust(30) + f"{item['amount']:.2f}".rjust(8)
+      output += '\n' + item['description'][:30].ljust(30) + f"{item['amount']:.2f}".rjust(8)
 
-      output += '\n' + f"Total: $ {round(self.balance, 2)}"
+      output += '\n' + f"Total: {round(self.balance, 2)}"
 
       return output
 
@@ -57,10 +52,6 @@ class Budget():
 # budget3 = Budget("Utilities")
 # budget4 = Budget("Transportation")
 # budget5 = Budget("Travel")
-
-
-
-
 
 
   # def ask_budget_name(self):
@@ -88,40 +79,6 @@ class Budget():
     # self.my_budgets = my_budgets.set(**kwargs)
 
     # print(my_budgets)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
