@@ -1,5 +1,5 @@
 class Budget:
-  print("******************************************")
+  print("**************************************")
 
   def __init__(self, budget):
     self.ledger = []
@@ -13,7 +13,7 @@ class Budget:
   def withdrawal(self, amount, description=''):
     if self.check_funds(amount):
       self.balance -= amount
-      self.ledger.append({"amount": (amount), "description": description})
+      self.ledger.append({"amount": amount, "description": description})
       return True
     else:
       return False
